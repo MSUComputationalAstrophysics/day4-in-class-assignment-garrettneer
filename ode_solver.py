@@ -107,7 +107,7 @@ energy_change_marker_list = [24,25,26,27]
 energy_change_color_list = [kRed,kBlack,kBlue,kGreen+1]
 energy_change_graph_list = []
 for i in range(0,4):
-	energy_change_graph_list.append(TGraph(len(time_step_list),array("d",time_step_list),array("d",energy_change_list[i:i+3])))
+	energy_change_graph_list.append(TGraph(len(time_step_list),array("d",time_step_list),array("d",energy_change_list[i*3:i*3+3])))
 	energy_change_graph_list[i].SetMarkerStyle(energy_change_marker_list[i])
 	energy_change_graph_list[i].SetMarkerColor(energy_change_color_list[i])
 	energy_change_graph_list[i].SetLineColor(energy_change_color_list[i])
